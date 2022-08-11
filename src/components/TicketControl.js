@@ -10,7 +10,7 @@ class TicketControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterTicketList: [],
+      mainTicketList: [],
       selectedTicket: null,
       editing: false
     };
@@ -31,9 +31,9 @@ class TicketControl extends React.Component {
   }
 
   handleDeletingTicket = (id) => {
-    const newMasterTicketList = this.state.masterTicketList.filter(ticket => ticket.id !== id);
+    const newMainTicketList = this.state.mainTicketList.filter(ticket => ticket.id !== id);
     this.setState({
-      masterTicketList: newMasterTicketList,
+      mainTicketList: newMainTicketList,
       selectedTicket: null
     });
   }
@@ -43,24 +43,24 @@ class TicketControl extends React.Component {
   }
 
   handleEditingTicketInList = (ticketToEdit) => {
-    const editedMasterTicketList = this.state.masterTicketList
+    const editedMainTicketList = this.state.mainTicketList
       .filter(ticket => ticket.id !== this.state.selectedTicket.id)
       .concat(ticketToEdit);
     this.setState({
-      masterTicketList: editedMasterTicketList,
+      mainTicketList: editedMainTicketList,
       editing: false,
       selectedTicket: null
     });
   }
 
   handleAddingNewTicketToList = (newTicket) => {
-    const newMasterTicketList = this.state.masterTicketList.concat(newTicket);
-    this.setState({masterTicketList: newMasterTicketList});
+    const newMainTicketList = this.state.mainTicketList.concat(newTicket);
+    this.setState({mainTicketList: newMainTicketList});
     this.setState({formVisibleOnPage: false});
   }
 
   handleChangingSelectedTicket = (id) => {
-    const selectedTicket = this.state.masterTicketList.filter(ticket => ticket.id === id)[0];
+    const selectedTicket = this.state.mainTicketList.filter(ticket => ticket.id === id)[0];
     this.setState({selectedTicket: selectedTicket});
   }
 
@@ -80,7 +80,7 @@ class TicketControl extends React.Component {
       currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList}/>;
       buttonText = "Return to Ticket List"; 
     } else {
-      currentlyVisibleState = <TicketList onTicketSelection={this.handleChangingSelectedTicket} ticketList={this.state.masterTicketList} />;
+      currentlyVisibleState = <TicketList onTicketSelection={this.handleChangingSelectedTicket} ticketList={this.state.mainTicketList} />;
       buttonText = "Add Ticket"; 
     }
     return (
