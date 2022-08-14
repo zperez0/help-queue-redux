@@ -1,14 +1,48 @@
-## Important Note to Epicodus Students
+## Help Queue Redux
 
-This project contains all the code from the LearnHowToProgram.com Section 2: React Fundamentals coursework in which we created a Help Queue project. 
+A React application built to learn Redux. 
 
-It is meant to be used as a starter repo to continue the Help Queue project in Section 3: React with Redux, starting in the lesson "Setting up Our First Redux Project":
+#### By _**Z Perez**_
 
-[https://www.learnhowtoprogram.com/react/react-with-redux/setting-up-our-first-project](https://www.learnhowtoprogram.com/react/react-with-redux/setting-up-our-first-project)
+## Technologies Used
+* _React_
+* _Redux_
+* _JavaScript_
+* _HTML_
+* _Bootstrap_
+* _Markdown_
+
+## Description
+This application contains full CRUD functionality. A User can view the tickets details, add, update, and delete a ticket.
+
+## Setup/Installation Requirements
+* _Go to [GitHub](https://github.com/zperez0/help-queue-redux.git)_
+* _Clone git repository to local machine_
+```
+$ git clone https://github.com/zperez0/tea-shop.git
+```
+* _Navigate to root folder and open directory in your terminal_
+
+#### Build Environment
+* _Install packages:_
+```
+$ npm install
+```
+
+#### Server:
+* _Start server:_
+```
+$ npm start
+```
+###### It should automatically open up the server if not
+
+* _Open up your browser and go to:_
+```
+http://localhost:3000/
+```
 
 ---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
 
@@ -76,3 +110,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+---
+
+## Known Bugs
+* _No known bugs._
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) _2022_, _Z Perez_
